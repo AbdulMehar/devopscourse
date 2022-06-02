@@ -1,0 +1,14 @@
+version: '3.7'
+
+services:
+
+  todo-app:
+    container_name: todo-react
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - '.:/app'
+      - '/app/node_modules'
+    ports:
+      - 3001:3000
